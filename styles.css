@@ -1,15 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@400;700&family=Source+Sans+Pro&display=swap');
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #FFD100;
+  --secondary-color: #333533;
+  --accent1-color: #ec4414;
+  --accent2-color: #D6D6D6;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Philosopher";
+  --paragraph-font: "Source Sans Pro", Helvetica, sans-serif;
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #FFD100;  /* headlines on a white background */ 
+  --headline-color-on-color: #333533; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #FFD100; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: #333533; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #FFD100  ;
+  --nav-link-color: #FFD100;
+  --nav-background-color: #333533;
+  --nav-hover-link-color: #333533;
+  --nav-hover-background-color: #FFD100;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    font-family: var(--heading-font);
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.collapsed {
+    display: none;
+}
+
+nav {
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+
+nav .mobile {
+    display: none;
+}
+
+nav .mobile .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+nav .mobile .header .more button{
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+}
+
+nav .logo-1 {
+    min-width: 250px;
+    /* width: 3rem; */
+
+}
+
+nav a  {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 20px 25px;
+
+} 
+
+nav a:hover {
+    color: black;
+    background-color: var(--primary-color);
+}
+
+nav .desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .desktop .primary,
+nav .desktop .secondary {
+    display: flex;
+
+}
+
+nav .desktop .secondary.mini {
+    display: none;
+
+}
+
+nav .articles-nav {
+    background-color: var(--accent1-color);
+}
+nav .welcome-nav {
+    background-color: var(--primary-color);
+}
+
+@media screen and (max-width: 853px){
+    nav .logo{
+        min-width: 100px;
+    }
+
+    nav .secondary.full{
+        display: none;
+    }
+
+    nav .secondary.mini{
+        display: block !important;
+    }
+
+    nav .secondary.mini .submenu{
+        background-color: black;
+        position: absolute;
+        display: none;
+        width: 200px;
+        right: 0;
+    }
+    nav .secondary.mini:hover .submenu{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 640px){
+    nav .desktop {
+        display: none;
+    }
+    nav .mobile {
+        display: block;
+    }
+}
+
 .icon {
     width: 2.5rem;
 }
 .logo {
-    width: 5rem;
+    width: 3rem;
+    padding: 0;
+    margin: 0;
 }
 .banner-img {
-    width: 400px;
+    width: 100%;
 }
 .img-latest {
     width: 400px;
 }
 .card-img {
-    width: 400px;
+    width: 100%;
+}
+
+.banner-grid {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10% 90%;
+}
+
+.banner-msg {
+    /* width: 100%; */
+    grid-column: 2/3;
+}
+
+.banner-box {
+    grid-column: 2/3;
+    grid-row: 2/3;  
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.card-img {
+    grid-column: 2/3;
+    grid-row: 1/5;
+}
+
+.main-card {
+    grid-column: 3/4;
+    grid-row: 1/5;
+}
+
+footer{
+    background-color: black;
+    color: var(--accent2-color);
+    padding: 25px 50px;
+    margin-top: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--accent2-color);
+
 }
