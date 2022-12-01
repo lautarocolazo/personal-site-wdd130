@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles.css">
-    <title>Applied Philosophy</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <title>Welcome - Applied Philosophy</title>
 </head>
 
 <body>
@@ -63,10 +64,10 @@
             </div>
         </nav>
 
-        <div class="banner-welcome">
+        <div class="banner-grid">
             <section class="banner-msg-welcome">
                 <h1 class="home-title-welcome">Welcome To Applied Philosophy</h1>
-                <h4>A Definition To Get You Started</h4>
+                <h4>Applied Philosophy To Everyday Life</h4>
             </section>
             <div class="banner-box-welcome">
                 <img class="banner-img-welcome" src="./images/re-sized-images/rsz_brandi-redd-6h9h-typuqq-unsplash.jpg" alt="plato philosopher">
@@ -74,16 +75,16 @@
             </div>
         </div>
     </div>
-    <main class="home-grid">
-        <section class="main-card">
-            <div class="entry">
+    <main class="welcome-grid">
+        <!-- <section class="main-card"> -->
+            <!-- <div class="entry"> -->
                 <h2>Title</h2>
-                <p class="entry-paragraph">Test of the text</p>
+                <p class="entry-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Parturient montes nascetur ridiculus mus. In hendrerit gravida rutrum quisque non tellus orci ac. Pretium nibh ipsum consequat nisl vel pretium lectus quam id. Ut aliquam purus sit amet luctus venenatis lectus. Maecenas pharetra convallis posuere morbi leo urna. Amet aliquam id diam maecenas ultricies mi eget mauris pharetra. Et molestie ac feugiat sed lectus vestibulum mattis. Fames ac turpis egestas integer eget aliquet. Varius sit amet mattis vulputate enim nulla aliquet. Aliquet nec ullamcorper sit amet risus nullam eget felis. Gravida rutrum quisque non tellus orci ac auctor augue mauris. Nisi est sit amet facilisis magna etiam tempor. Odio facilisis mauris sit amet massa vitae.</p>
                 <div class='button-box'>
-                    <a class='read-more' href="./articles.html">READ MORE</a>
+                    <a class='read-more-button' href="./articles.html">READ MORE</a>
                 </div>
-            </div>
-        </section>
+            <!-- </div> -->
+        <!-- </section> -->
     </main>
     <footer>
         <a href="../index.html">
@@ -106,5 +107,14 @@
                 <img class="icon" src="./images/youtube.png" alt="youtube icon">
             </a>
         </div>
-    </footer>  
+    </footer>
+    <script>
+        const bMore = document.querySelector('#bMore');
+        const links = document.querySelector('#links');
+
+        bMore.addEventListener('click', (e) => {
+            links.classList.toggle('collapsed');
+        })
+    </script>
+    </body>
 </html>
