@@ -2,7 +2,7 @@
 
 :root {
   /* change the values below to your colors from your palette */
-  --primary-color: #FFD100;
+  --primary-color: #e4c44c;
   --secondary-color: #333533;
   --accent1-color: #ec4414;
   --accent2-color: #D6D6D6;
@@ -12,15 +12,15 @@
   --paragraph-font: "Source Sans Pro", Helvetica, sans-serif;
 
   /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: #FFD100;  /* headlines on a white background */ 
+  --headline-color-on-white: #e4c44c;  /* headlines on a white background */ 
   --headline-color-on-color: #333533; /* headlines on a colored background */ 
-  --paragraph-color-on-white: #FFD100; /* paragraph text on a white background */ 
+  --paragraph-color-on-white: #e4c44c; /* paragraph text on a white background */ 
   --paragraph-color-on-color: #333533; /* paragraph text on a colored background */ 
-  --paragraph-background-color: #FFD100  ;
-  --nav-link-color: #FFD100;
+  --paragraph-background-color: #e4c44c  ;
+  --nav-link-color: #e4c44c;
   --nav-background-color: #333533;
   --nav-hover-link-color: #333533;
-  --nav-hover-background-color: #FFD100;
+  --nav-hover-background-color: #e4c44c;
 }
 
 body {
@@ -28,6 +28,9 @@ body {
     font-size: 1.2rem;
     margin: 0;
     padding: 0;
+}
+a {
+    text-decoration: none;
 }
 
 h1, h2 {
@@ -163,6 +166,8 @@ nav .welcome-nav {
 }
 .banner-img {
     width: 100%;
+    border-radius: 5px;
+
 }
 .img-latest {
     width: 400px;
@@ -187,6 +192,10 @@ nav .welcome-nav {
     grid-row: 2/3;  
 }
 
+.banner-paragraph {
+    margin-bottom: 5rem;
+}
+
 .home-grid {
     display: grid;
     grid-template-columns: 10% 40% 40% 10%;
@@ -197,6 +206,7 @@ nav .welcome-nav {
     display: grid;
     grid-template-columns: 10% 20% 40% 20% 10%;
     grid-template-rows: repeat(4, 1fr);
+    background-color: var(--primary-color);
 
 }
 
@@ -206,7 +216,19 @@ nav .welcome-nav {
     text-align: center;
 }
 
+.entry {
+    background: white;
+    margin: 4.7rem 2rem 0 2rem;
+    border-radius: 5px;
+}
+
 .entry-paragraph {
+    grid-column: 2/5;
+    grid-row: 2/4;
+    text-align: center;
+}
+
+.entry-paragraph-welcome {
     grid-column: 2/5;
     grid-row: 2/4;
     text-align: center;
@@ -214,6 +236,7 @@ nav .welcome-nav {
 
 .entry h2 {
     text-align: center;
+    font-size: 2rem;
 }
 
 .button-box {
@@ -232,17 +255,26 @@ nav .welcome-nav {
 
 .banner-img-welcome {
     width: 100%;
+    border-radius: 10px;
 }
 
 .card-img {
     grid-column: 2/3;
     grid-row: 1/5;
+    border-radius: 5px;
+
 }
 
 .main-card {
     grid-column: 3/4;
     grid-row: 1/5;
+    background-color: black;
+    margin-left: 1rem;
+    border-radius: 5px;
+    background-color: var(--primary-color);
 }
+
+
 
 .banner-articles {
     display: grid;
@@ -277,15 +309,55 @@ nav .welcome-nav {
 
 .img-latest {
     grid-column: 2/3;
+    width: 100%;
+    height: 100%;
 }
 
 .side-info {
     grid-column: 3/4;
+    text-align: center;
+    background-color: var(--primary-color);
 }
+
+.side-info h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+
 
 .next-articles {
     grid-column: 4/5;
+    text-align: center;
+    background-color: black;
+    color: white;
 }
+
+.articles-links{
+    text-decoration: none;
+    color: white;
+}
+.articles-links-featured{
+    text-decoration: none;
+    color: black;
+}
+.articles-links:hover{
+    color: var(--primary-color);
+}
+.articles-links-featured:hover{
+    color: var(--primary-color);
+}
+
+.note-2 {
+    padding: 5px;
+}
+.note-4 {
+    padding: 5px;
+}
+.note-6 {
+    padding: 5px;
+}
+
 
 .featured-notes-grid {
     display: grid;
@@ -295,7 +367,6 @@ nav .welcome-nav {
 .next-notes {
     grid-column: 2/3
 }
-
 
 
 footer{
@@ -312,4 +383,37 @@ footer a {
     text-decoration: none;
     color: var(--accent2-color);
 
+}
+
+.read-more {
+    text-decoration: none;
+    background-color: black;
+    border-style: none;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+    max-width: none;
+    min-height: 44px;
+    min-width: 10px;
+    outline: none;
+    overflow: hidden;
+    padding: 9px 20px 8px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 250px;
+}
+
+.read-more:hover,
+.read-more:focus {
+  opacity: .75;
 }
